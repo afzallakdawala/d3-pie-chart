@@ -1,0 +1,65 @@
+<html>
+<head>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/piechart.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/pietooltip.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="row">
+        <div class="span12">
+            <div id="pie_chart">
+            </div>            
+        </div>
+    </div>
+    <div class="popover fade  in" style="display: block; display: none; ">
+      <div class="arrow"></div>      
+      <div class="popover-content"></div>
+    </div>   
+
+</body>
+
+<script type="text/javascript">
+    
+    var dataset = 
+            [{
+                "name": "Nokia",
+                "datapoint" :100,
+                "color" : "#c6dbef",
+                "tooltip" : "<h1>Nokia</h1> saleskfjlkasjfsa"
+              },
+            {   "name": "Samsung",
+                "datapoint" :200,
+                "color" : "red",
+                "tooltip" : "<h1>Samsung</h1> saleskfjlkasjfsa"
+              },
+            {   "name": "Sony",
+                "datapoint" :50,
+                "color" : "green",
+                "tooltip" : "<h1>Sony</h1> saleskfjlkasjfsa"
+              },
+            {   "name": "Micromax",
+                "datapoint" :300,
+                "color" : "yellow",
+                "tooltip" : "<h1>Micromax</h1> saleskfjlkasjfsa"
+              }
+
+            ];
+    
+    piechart = new Object();
+    piechart.data = dataset;
+    piechart.width = 500;
+    piechart.height = 500;
+    piechart.div_id = "pie_chart";
+    piechart.donut = {"create" : true, "radius" : 5 };
+    piechart.automated_color = false;    
+
+    pie_chart_init();
+
+</script>
+</html>
+
+ 
